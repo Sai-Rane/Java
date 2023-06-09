@@ -13,5 +13,9 @@ public class Function_1 {
 
         // What happens in memory
         // Functions are stored in memory in form of Stack
+
+        // Difference between functions and methods
+        // We can call functions directly whereas methods are called using Objects of
+        // Class
     }
 }
