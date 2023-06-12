@@ -11,8 +11,24 @@ public class Function_8 {
         int arr[] = new int[num];
         for (int i = 0; i < num; i++) {
             arr[i] = sc.nextInt();
-            // System.out.println(arr);
         }
-        System.out.println(arr[0]);
+        System.out.println(arr);
+        int positive = 0;
+        int negative = 0;
+        int zeroes = 0;
+        for (int i = 0; i < arr.length; i++) {
+            // System.out.print(arr[i] + " ");
+            if (arr[i] > 0) {
+                // System.out.println("positive" + positive++);
+                positive++;
+            } else if (arr[i] < 0) {
+                // System.out.println("negative" + negative++);
+                negative++;
+            } else {
+                // System.out.println("zeroes" + zeroes++);
+                zeroes++;
+            }
+        }
+        System.out.print("positive" + positive + "\n negative" + negative + "\n zeroes" + zeroes);
     }
 }
