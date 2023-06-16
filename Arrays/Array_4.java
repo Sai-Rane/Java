@@ -14,5 +14,22 @@ public class Array_4 {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
+        // System.out.println(arr); // This prints the memory address of array
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Array " + arr[i]);
+        }
+        System.out.println("Enter num you want to search in Array");
+        int num = sc.nextInt();
+        boolean flag = false;
+        for (int i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
+                System.out.println("Index is " + i);
+                flag = true;
+            }
+        }
+        if (flag == false) {
+            System.out.println("Number not present in Array");
+        }
     }
 }
