@@ -7,7 +7,7 @@ public class String_3 {
         // Strings in Java are Immutable
         // In heap memory Objects are created and in stack variables are created
 
-        // Syatax of declaring StringBuilder
+        // Syntax of declaring StringBuilder
 
         StringBuilder sb = new StringBuilder("John");
         System.out.println(sb);
@@ -30,5 +30,13 @@ public class String_3 {
         System.out.println(sb); // SJhn
         sb.append("Mark");
         System.out.println(sb);
+
+        // insert function
+        sb.insert(0, 'S');
+        System.out.println(sb); // SSPhnMark
+
+        // delete function
+        sb.delete(0, 5);
+        System.out.println(sb); // Mark
     }
 }
