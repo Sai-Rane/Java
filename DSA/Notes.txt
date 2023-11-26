@@ -1,0 +1,17 @@
+Data Structure is way to store and organize data efficiently
+
+Efficiently means in terms of Performance and Memory.
+You build an Application through Algorithms(Set of instructions).
+
+Time Complexity->Measure of how the running time of an algorithm increases with the size of input data
+It should take less Time
+
+Space Complexity
+It should take less space in Memory
+
+Suppose you want to search an element in a sorted array
+There are multiple solutions for it. For example:Linear Search,Binary Search
+
+In Linear Search we traverse through the array from start
+In Binary search you divide your array into two parts.For dividing the array you need to find mid part of array
+Adv of Binary Search is number of operation you do is less
