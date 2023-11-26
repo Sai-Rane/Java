@@ -15,3 +15,18 @@ There are multiple solutions for it. For example:Linear Search,Binary Search
 In Linear Search we traverse through the array from start
 In Binary search you divide your array into two parts.For dividing the array you need to find mid part of array
 Adv of Binary Search is number of operation you do is less
+
+---------------------------------------------------
+
+Binary Search
+int a=[5,6,8,9,11,13,17]
+Suppose you want to search 8 in the array
+In Binary search you divide the array in two parts(You need to find a mid value for that), So you give a starting point and a ending point.
+Mid value=(Start point + End point)/2
+For above array, Mid value =0+6/2=3 i.e a[3]
+Now a[3] has value 9, which is not equal to the target value which is 8 in our case 
+Since the mid value is greater than than the target value we can skip all the value ahead of 9(i.e 11,13,17).Now your new array becomes a=[5,6,8,9]
+Now let's find mid value again, Mid val=0+3/2=1.5==1
+Now you check whether a[1] matches with target value or not, here a[1] has value 6 which does not matches with target.
+Since the mid value is lesser than than the target value we can skip all the value behind 6(i.e 5).Now your new array becomes
+a=[6,8,9]. Again find mid value which is 1+3/2=2. Now a[2] matches with our Target value
