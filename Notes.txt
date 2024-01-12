@@ -50,7 +50,7 @@ There are two types of data types in Java: primitive and non-primitive.
 Local Variable is declared inside the body of the method. You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
 A local variable cannot be defined with "static" keyword.
 
-Instance Variable is declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.
+Instance Variable is declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.  Instance variable gets memory each time when we create an object of the class.
 
 Static variable
 A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
@@ -115,3 +115,66 @@ In Java, we use abstract class and interface to achieve abstraction.
 Encapsulation
 Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
 A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+
+---------------------------------------------------------------------------------------------------------------
+Constructor
+It is called when an instance of the class is created. In Java, a constructor is just like a method but without return type. It can also be overloaded like Java methods.
+There are two types of constructors in Java: no-arg constructor, and parameterized constructor.
+There are two rules defined for the constructor.
+
+Rules for defining Constructor:
+Constructor name must be the same as its class name
+A Constructor must have no explicit return type
+A Java constructor cannot be abstract, static, final, and synchronized
+
+The default constructor is used to provide the default values to the object like 0, null, etc., depending on the type.
+
+//Java Program to create and call a default constructor  
+class Bike1{  
+//creating a default constructor  
+Bike1(){System.out.println("Bike is created");
+}  
+//main method  
+public static void main(String args[]){  
+//calling a default constructor  
+Bike1 b=new Bike1();  
+}  
+}  
+
+---------------------------------------------------------------------------------------------------------------
+https://www.javatpoint.com/static-keyword-in-java
+Static Variable
+The static variable gets memory only once in the class area at the time of class loading.
+
+Java static method
+If you apply static keyword with any method, it is known as static method.
+A static method belongs to the class rather than the object of a class.
+A static method can be invoked without the need for creating an instance of a class.
+A static method can access static data member and can change the value of it.
+
+There are two main restrictions for the static method
+1. The static method can not use non static data member or call non-static method directly.
+2. this and super cannot be used in static context.
+
+---------------------------------------------------------------------------------------------------------------
+
+this keyword is used to distinguish local variable and instance variable.
+this keyword is used to access current class member variable and current class functions
+this() can be used to invoke the current class constructor. It is used to reuse the constructor. In other words, it is used for constructor chaining.
+
+class A{  
+A(){
+    System.out.println("hello a");
+    }  
+A(int x){  
+this();
+System.out.println(x);  
+}  
+}  
+class TestThis5{  
+public static void main(String args[]){  
+A a=new A(10);  
+}} 
+
+Rule: Call to this() must be the first statement in constructor
+this refers to current Object. Current objevt means object which is calling the method
