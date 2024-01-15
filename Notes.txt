@@ -269,6 +269,7 @@ Can we override static method?
 No, a static method cannot be overridden. So the main method also cant be overriden
 
 ---------------------------------------------------------------------------------------------------------------
+https://www.javatpoint.com/super-keyword
 Super Keyword in Java
 The super keyword in Java is a reference variable which is used to refer immediate parent class object.
 super keyword can be used to invoke parent class method
@@ -293,3 +294,57 @@ black
 white
 
 In the above example, Animal and Dog both classes have a common property color. If we print color property, it will print the color of current class by default. To access the parent property, we need to use super keyword.
+Note: super() is added in each class constructor automatically by compiler if there is no super() or this().
+
+---------------------------------------------------------------------------------------------------------------
+Instance Initializer block is used to initialize the instance data member. It run each time when object of the class is created.
+
+What is invoked first, instance initializer block or constructor? Ans: instance initializer 
+
+class Bike8{  
+    int speed;  
+      
+    Bike8(){System.out.println("constructor is invoked");}  
+   
+    {System.out.println("instance initializer block invoked");}  
+       
+    public static void main(String args[]){  
+    Bike8 b1=new Bike8();  
+    Bike8 b2=new Bike8();  
+    }      
+}  
+
+Output:instance initializer block invoked
+       constructor is invoked
+       instance initializer block invoked
+       constructor is invoked
+In the above example, it seems that instance initializer block is firstly invoked but NO. Instance intializer block is invoked at the time of object creation. The java compiler copies the instance initializer block in the constructor after the first statement super(). So firstly, constructor is invoked.
+
+---------------------------------------------------------------------------------------------------------------
+The final keyword in java is used to restrict the user. The java final keyword can be used in many context. Final can be:
+variable
+method
+class
+If you make any variable as final, It can't be changed because final variable once assigned a value can never be changed.
+If you make any method as final, you cannot override it.
+If you make any class as final, you cannot extend it.
+
+Can we initialize blank final variable?
+Yes, but only in constructor. For example:
+
+class Bike10{  
+  final int speedlimit;//blank final variable  
+    
+  Bike10(){  
+  speedlimit=70;  
+  System.out.println(speedlimit);  
+  }  
+  
+  public static void main(String args[]){  
+    new Bike10();  
+ }  
+}  
+Output: 70
+
+Can we declare a constructor final?
+No, because constructor is never inherited.
