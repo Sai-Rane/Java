@@ -111,6 +111,7 @@ Polymorphism
 If one task is performed in different ways, it is known as polymorphism. For example: to convince the customer differently, to draw something, for example, shape, triangle, rectangle, etc.
 In Java, we use method overloading and method overriding to achieve polymorphism.
 Another example can be to speak something; for example, a cat speaks meow, dog barks woof, etc.
+If you overload a static method in Java, it is the example of compile time polymorphism.
 
 Abstraction
 Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing.
@@ -228,6 +229,7 @@ class Vehicle{
   //defining a method  
   void run(){System.out.println("Vehicle is running");}  
 }  
+
 //Creating a child class  
 class Bike2 extends Vehicle{  
   //defining the same method as in the parent class  
@@ -348,3 +350,12 @@ Output: 70
 
 Can we declare a constructor final?
 No, because constructor is never inherited.
+
+---------------------------------------------------------------------------------------------------------------
+Upcasting
+If the reference variable of Parent class refers to the object of Child class, it is known as upcasting. 
+
+For example:
+class A{}  
+class B extends A{}  
+A a=new B();//upcasting  

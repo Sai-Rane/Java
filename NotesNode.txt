@@ -1,0 +1,6 @@
+Different browsers(such as Firefox, Chrome, Safari etc) have different JS engines to run your code on Browser.
+Chrome uses V8 engine.
+Internet Explorer was using Chakra
+
+NodeJS is not a programming language, it is a runtime environment in which Javascript runs
+ExpressJS It is a framework
